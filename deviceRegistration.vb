@@ -39,7 +39,7 @@ Public Class deviceRegistration
             conn.Open()
         Catch ex As Exception
         End Try
-        cmd.CommandText = String.Format("INSERT INTO `regisperangkat` (`idperangkat` , `tanggalinstalasi`,`noproduksi`,`tipeperangkat`,`location`) VALUES ('{0}' , '{1}', '{2}', '{3}', '{4}')", idDevice, intallationDate, deviceType, deviceSerialNumber, location)
+        cmd.CommandText = String.Format("INSERT INTO `regisperangkat` (`id perangkat` , `tanggal instalasi`,`tipe perangkat`,`no produksi`,`location`) VALUES ('{0}' , '{1}', '{2}', '{3}', '{4}')", idDevice, intallationDate, deviceType, deviceSerialNumber, location)
         cmd.Connection = conn
         cmd.ExecuteNonQuery()
         conn.Close()

@@ -68,8 +68,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="ZedGraph">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\EPEVER\SolarStationMonitor\ZedGraph.dll</HintPath>
+    <Reference Include="ZedGraph, Version=5.1.2.878, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph.Web">
+      <HintPath>F:\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.Web.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +115,12 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -132,16 +142,16 @@
     <Compile Include="photoVoltaic.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.vb">
-      <DependentUpon>UserControl1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="UserControl2.Designer.vb">
       <DependentUpon>UserControl2.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControl2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userregistration.Designer.vb">
+      <DependentUpon>userregistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userregistration.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -158,6 +168,9 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -167,11 +180,11 @@
     <EmbeddedResource Include="photoVoltaic.resx">
       <DependentUpon>photoVoltaic.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userregistration.resx">
+      <DependentUpon>userregistration.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

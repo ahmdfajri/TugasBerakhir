@@ -7,7 +7,12 @@ Public Class photoVoltaic
     Dim deviceTable
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If DataGridView1.Columns(e.ColumnIndex).HeaderText = "idperangkat" Then
+            Dim selectedIdCell As DataGridViewCell = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex)
+            If selectedIdCell.Value IsNot Nothing Then
 
+            End If
+        End If
 
     End Sub
 
@@ -60,5 +65,9 @@ Public Class photoVoltaic
 
     Private Sub photoVoltaic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form4.Show()
     End Sub
 End Class

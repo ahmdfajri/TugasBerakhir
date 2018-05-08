@@ -1,24 +1,24 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class UserControl2
+Public Class userregistration
     Dim conn As New MySqlConnection
     Dim cmd As New MySqlCommand
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim ssidName As String = TextBox1.Text
-        Dim pass As String = TextBox2.Text
+        Dim userName As String = TextBox1.Text
+        Dim userNumber As String = TextBox2.Text
+        Dim userType As String = TextBox3.Text
         connect()
         Try
             conn.Open()
         Catch ex As Exception
         End Try
-        cmd.CommandText = String.Format("INSERT INTO `settings` (`ssid_name` , `ssid_password`) VALUES ('{0}' , '{1}')", ssidName, pass)
+        cmd.CommandText = String.Format("INSERT INTO `userregistration` (`name` , `user_number`,`user_type`) VALUES ('{0}' , '{1}', '{2}')", userName, userNumber, userType)
         cmd.Connection = conn
         cmd.ExecuteNonQuery()
         conn.Close()
 
-        MsgBox("Setting Registered!", MsgBoxStyle.Information, "Create")
-
+        MsgBox("User Registered!", MsgBoxStyle.Information, "Create")
     End Sub
 
     Public Sub connect()
